@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleButton.addEventListener("click", () => {
     navbarLinks.classList.toggle("ham");
   });
-})
+});
 
-// GSAP ANIMATIONS 
+// GSAP ANIMATIONS
 function applyAnimations() {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
@@ -19,23 +19,21 @@ function applyAnimations() {
       scrollTrigger: {
         trigger: ".animated-heading",
         start: "top 0%",
-        end : 'top -100%',
+        end: "top -100%",
         scrub: 2,
       },
     });
 
-        // EXPERIENCE HEADING
-        gsap.to(".experience-heading h1", {
-          x: "-800%", // Use `x` for horizontal movement
-          scrollTrigger: {
-            trigger: ".experience-heading",
-            start: "top 0%",
-            end : 'top -100%',
-            scrub: 2,
-          },
-        });
-
-        
+    // EXPERIENCE HEADING
+    gsap.to(".experience-heading h1", {
+      x: "-800%", // Use `x` for horizontal movement
+      scrollTrigger: {
+        trigger: ".experience-heading",
+        start: "top 0%",
+        end: "top -100%",
+        scrub: 2,
+      },
+    });
 
     // EXPERTISE SECTION ANIMATION
     gsap.from(
@@ -46,9 +44,9 @@ function applyAnimations() {
         duration: 1,
         stagger: 0.2,
         scrollTrigger: {
-          trigger:
-            ".page2-heading:nth-last-child(1)",
-            start: "top 0%",
+          trigger: ".page2-heading:nth-last-child(1)",
+          start: "top 60%",
+          markers : true,
         },
       }
     );
