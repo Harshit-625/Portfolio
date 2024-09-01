@@ -1,3 +1,14 @@
+// HAMBURGER
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("toggleButton");
+  const navbarLinks = document.getElementById("navbarLinks");
+
+  toggleButton.addEventListener("click", () => {
+    navbarLinks.classList.toggle("ham");
+  });
+})
+
+// GSAP ANIMATIONS 
 function applyAnimations() {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
 

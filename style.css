@@ -20,6 +20,27 @@ body{
 }
 
 /* NAVBAR  */
+.toggle-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  width: 40px;
+  border-radius: 100px;
+  background-color: #fff;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.toggle-button .bar {
+  width: 20px;
+  height: 3px;
+  background-color: #141414;
+  margin: 2px 0;
+  transition: 0.3s;
+}
+
+
 nav{
   color: #fff;
   height: 20vh;
@@ -395,28 +416,44 @@ nav h1 {
 
 /* MOBILE VIEW  */
 @media (max-width: 768px) {
-
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  nav{
+    z-index: 1;
+    position: relative;
+    margin-left: 3vw;
+  }
+  .toggle-button {
+    display: flex;
+    position: absolute;
+    margin-left: 80vw;
     
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
   }
-  
-  html, body {
-    height: 100%;
-    width: 100%;
+  .nav-list{
+    display: none;
   }
-  body{
+  .navbar-links ul  {
+    color: white;
+  }
+  .nav-list.ham {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vh;
+    border-radius: 0px;
     background-color: #000;
-    overflow-x: hidden;
+    height: 40vh;
+    width:100vw;
+    right: 0;
+    top: 12vh; 
+    padding: 10px;
   }
-
-  
+  .nav-list.ham a{
+    height: 15%;
+    font-size: 1rem;
+    border-radius: 20px;
+    width: 80%;
+  }
   /* NAVBAR  */
   nav{
     height: 15vh;
