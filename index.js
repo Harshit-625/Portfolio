@@ -24,7 +24,7 @@ function applyAnimations() {
 
 
     gsap.to(".animated-heading h1", {
-      x: "-400%", // Use `x` for horizontal movement
+      x: "-400%", 
       scrollTrigger: {
         trigger: ".animated-heading",
         start: "top 0%",
@@ -35,7 +35,7 @@ function applyAnimations() {
 
     // EXPERIENCE HEADING
     gsap.to(".experience-heading h1", {
-      x: "-800%", // Use `x` for horizontal movement
+      x: "-800%", 
       scrollTrigger: {
         trigger: ".experience-heading",
         start: "top 0%",
@@ -55,6 +55,7 @@ function applyAnimations() {
         scrollTrigger: {
           trigger: ".page2-heading:nth-last-child(1) .expertise h2",
           start: "top 60%",
+          onEnter: () => ScrollTrigger.refresh()
         },
       });
 
@@ -67,7 +68,8 @@ function applyAnimations() {
           stagger : 0.5,
           scrollTrigger : {
             trigger : ".skills-cont .skill-image img",
-            start : "top 60%"
+            start : "top 60%",
+            onEnter: () => ScrollTrigger.refresh()
           }
         }
       )
