@@ -14,6 +14,15 @@ function applyAnimations() {
 
   if (isMobile) {
     // MOBILE ANIMATIONS
+
+
+    gsap.from(".page1 header h1", {
+      y:100,
+      opacity : 0,
+      duration :2,
+    })
+
+
     gsap.to(".animated-heading h1", {
       x: "-400%", // Use `x` for horizontal movement
       scrollTrigger: {
@@ -44,36 +53,35 @@ function applyAnimations() {
         duration: 1,
         stagger: 0.2,
         scrollTrigger: {
-          trigger: ".page2-heading:nth-last-child(1)",
+          trigger: ".page2-heading:nth-last-child(1) .expertise h2",
           start: "top 60%",
-          markers : true,
         },
-      }
-    );
+      });
+
+
+      gsap.from(
+        ".skills-cont .skill-image img" , {
+          y : 100,
+          opacity : 0,
+          duration  : 2,
+          stagger : 0.5,
+          scrollTrigger : {
+            trigger : ".skills-cont .skill-image img",
+            start : "top 60%"
+          }
+        }
+      )
   } else {
     // WEB ANIMATIONS
     // PAGE 1
 
-    // HEADER ANIMATION
-    gsap.from("header h1 span:nth-child(1)", {
-      y: -200,
-      opacity: 0,
-      duration: 1.5,
-    });
+    gsap.from(".page1 header h1", {
+      y:100,
+      opacity : 0,
+      duration :2,
+    })
 
-    gsap.from("header h1 span:nth-child(2)", {
-      y: 50,
-      opacity: 0,
-      duration: 1.5,
-    });
-
-    gsap.from("#scroll-down", {
-      scale: 0,
-      duration: 1.5,
-      opacity: 0,
-    });
-
-    // PROJECT HEADING
+   // PROJECT HEADING
     gsap.to(".animated-heading h1", {
       transform: "translateX(-200%)",
       scrollTrigger: {
@@ -133,6 +141,20 @@ function applyAnimations() {
         },
       }
     );
+
+
+    gsap.from(
+      ".skills-cont .skill-image img" , {
+        y : 100,
+        opacity : 0,
+        duration  : 2,
+        stagger : 0.5,
+        scrollTrigger : {
+          trigger : ".skills-cont .skill-image img",
+          start : "top 60%"
+        }
+      }
+    )
   }
 }
 
