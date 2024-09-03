@@ -405,6 +405,9 @@ nav h1 {
 
 /* MOBILE VIEW  */
 @media (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
   nav{
     z-index: 1;
     position: relative;
@@ -452,10 +455,6 @@ nav h1 {
     padding: 15px;
   }
 
-  .page1{
-    font-size: 1rem;
-  }
-
   /* ANIMATED HEADING  */
 .animated-heading , .experience-heading{
   background-color: var(--darkGrey);
@@ -474,10 +473,17 @@ nav h1 {
 /* PAGE 1 */
   .page1{
     height: 85vh;
+
+  }
+  .page1 header{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .page1 header h1{
     width : 80%;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     
   }
